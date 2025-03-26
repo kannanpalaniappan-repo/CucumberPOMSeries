@@ -30,5 +30,17 @@ public class LoginPage {
 	
 	public void clickOnLogin() {
 		driver.findElement(login).click();
+		try {
+			Thread.sleep(3000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	public AccountsPage doLogin(String userName,String pwd) {
+		enterUserName(userName);
+		enterPassword(pwd);
+		clickOnLogin();
+		return new AccountsPage(driver);
 	}
 }

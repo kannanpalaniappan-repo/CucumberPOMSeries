@@ -16,7 +16,7 @@ public class LoginSteps {
 
 	@Given("user is on login page")
 	public void user_is_on_login_page() {
-	  DriverFactory.getDriver().get("https://pc-dev-gwcpdev.cpaspire.zeta1-andromeda.guidewire.net/PolicyCenter.do");
+		DriverFactory.getDriver().get("https://pc-dev-gwcpdev.cpaspire.zeta1-andromeda.guidewire.net/PolicyCenter.do");
 	}
 
 	@When("user gets the title of the page")
@@ -27,12 +27,12 @@ public class LoginSteps {
 
 	@Then("page title should be {string}")
 	public void page_title_should_be(String expectedTitle) {
-	   Assert.assertTrue(title.contains(expectedTitle));
+		Assert.assertTrue(title.contains(expectedTitle));
 	}
 
 	@When("user enters username {string}")
 	public void user_enters_username(String username) {
-	   loginPage.enterUserName(username);
+		loginPage.enterUserName(username);
 	}
 
 	@When("user enters password {string}")
@@ -42,11 +42,7 @@ public class LoginSteps {
 
 	@When("user clicks on login button")
 	public void user_clicks_on_login_button() {
-	    loginPage.clickOnLogin();
-		/*
-		 * try { Thread.sleep(3000); } catch (InterruptedException e) {
-		 * e.printStackTrace(); }
-		 */
+		loginPage.clickOnLogin();
 	}
-	
+
 }
