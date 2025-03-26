@@ -60,7 +60,7 @@
 
 	</dependencies>
 
-	<!--<build>
+	<build>
 		<plugins>
 
 		<plugin>
@@ -69,15 +69,15 @@
 			<version>3.14.0</version>
 			<configuration>
 				<encoding>UTF-8</encoding>
-				<source>${java.version}</source>
-				<target>${java.version}</target>
+				<source>1.8</source>
+				<target>1.8</target>
 			</configuration>
 		</plugin>
 
 		<plugin>
 			<groupId>org.apache.maven.plugins</groupId>
 			<artifactId>maven-surefire-plugin</artifactId>
-			<version>${maven.suirefire.version}</version>
+			<version>3.5.2</version>
 		</plugin>
 
 		<plugin>
@@ -91,7 +91,7 @@
 					</goals>
 					<configuration>
 						<includes>
-							<include>**/MyTestRunner.java</include>
+							<include>**/AccountTestRunner.java</include>
 						</includes>
 						<parallel>methods</parallel>
 						<threadCount>4</threadCount>
@@ -101,5 +101,5 @@
 			</executions>
 		</plugin>
 		</plugins>
-	</build>-->
+	</build>
 </project>
