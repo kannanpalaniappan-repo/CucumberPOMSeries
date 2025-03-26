@@ -9,7 +9,10 @@ import io.cucumber.junit.CucumberOptions;
 @CucumberOptions(
 		features = {"src/test/resources/features/AccountsPage.feature"},
 		glue= {"stepdefinitions","apphooks"},
-		plugin = {"pretty"}
+		plugin = {"pretty",
+				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
+				
+		}
 )
 public class AccountTestRunner {
 
